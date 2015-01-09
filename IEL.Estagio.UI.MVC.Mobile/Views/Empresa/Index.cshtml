@@ -1,0 +1,477 @@
+﻿@model IEnumerable<IEL.Estagio.Application.ViewModels.EmpresaViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idvaga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idempresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idareaestagio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idunidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cod_notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_vaga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flg_publica_web)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flg_ativo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtd_vagas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtd_max_vagas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pode_candidatar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtd_vagas_candidatar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.qtd_vaga_cancelada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ddd_telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contato2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ddd_telefone2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefone2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bairro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_na_empresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sexo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pre_req_adicional)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.necessita_habilitacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.possuir_veiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.deficiente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_deficiente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.observacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.testes_aplicados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duracao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.turno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descr_a_combinar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hora_inicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hora_fim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hora_almoco_ini)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hora_almoco_fim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ch_dia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dias_semana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.por_semana)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.possibilidade_contratacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_recesso_inicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_recesso_fim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_recesso_inicio2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_recesso_fim2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor_bolsa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor_transporte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.transporte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alimentacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.outros_beneficios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargo_supervisor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.obs_caracteristica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.atividades)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expectativa_aprendizagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_abertura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_suspensao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.motivo_suspensao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_fechamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_prox_acompanhamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idmotivo_cancelamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_ult_cancelamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_cancelamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idresponsavel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_cadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_cadastro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_alteracao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.usu_alteracao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.flg_permite_formandos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idperfilvaga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor_sel_diferenciada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_idconselhoprof)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisor_num_conselhoprof)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idwebvaga)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idvaga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idempresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idareaestagio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idunidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cod_notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_vaga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flg_publica_web)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flg_ativo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtd_vagas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtd_max_vagas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pode_candidatar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtd_vagas_candidatar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qtd_vaga_cancelada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ddd_telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contato2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ddd_telefone2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefone2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bairro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_na_empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pre_req_adicional)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.necessita_habilitacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.possuir_veiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deficiente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_deficiente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.observacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.testes_aplicados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duracao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.turno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descr_a_combinar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hora_inicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hora_fim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hora_almoco_ini)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hora_almoco_fim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ch_dia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dias_semana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.por_semana)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.possibilidade_contratacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_recesso_inicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_recesso_fim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_recesso_inicio2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_recesso_fim2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor_bolsa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor_transporte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.transporte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.alimentacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.outros_beneficios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargo_supervisor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.obs_caracteristica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.atividades)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expectativa_aprendizagem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_abertura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_suspensao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.motivo_suspensao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_fechamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_prox_acompanhamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idmotivo_cancelamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_ult_cancelamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_cancelamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idresponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_cadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_cadastro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_alteracao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.usu_alteracao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.flg_permite_formandos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idperfilvaga)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor_sel_diferenciada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_idconselhoprof)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisor_num_conselhoprof)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idwebvaga)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
